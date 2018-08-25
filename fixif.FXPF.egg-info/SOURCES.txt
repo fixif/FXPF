@@ -1,0 +1,10 @@
+README
+setup.py
+fixif/__init__.py
+fixif.FXPF.egg-info/PKG-INFO
+fixif.FXPF.egg-info/SOURCES.txt
+fixif.FXPF.egg-info/dependency_links.txt
+fixif.FXPF.egg-info/requires.txt
+fixif.FXPF.egg-info/top_level.txt
+fixif/FXPF/FXPF.py
+fixif/FXPF/__init__.py

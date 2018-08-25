@@ -1,0 +1,45 @@
+<-----Result-----> Step 1: MSB in mpfi format
+Step 1:  interval supremum 
+5 	2 	2 	4 	4 	3 	4 	4 	3 	
+
+<-----Result-----> Step 2: MSB in mpfi format
+9 1 
+[4.3881,4.3882]	
+[2.1843,2.1844]	
+[1.8744,1.8745]	
+[3.4751,3.4752]	
+[3.9100,3.9101]	
+[2.8527,2.8528]	
+[3.4962,3.4963]	
+[4.1892,4.1893]	
+[2.2248,2.2249]	
+Computing MSB on step 3 -----------------
+Step 3: MSB in mpfi format
+Step 3 : MSB in mpfi format
+5 	3 	3 	4 	5 	4 	4 	5 	3 	
+Computing MSB on step 4 -----------------
+Step 4: MSB in mpfi format
+Step 4 : MSB in mpfi format
+5 	3 	4 	5 	5 	4 	5 	5 	3 	
+Computing MSB on step 5 -----------------
+Step 5: MSB in mpfi format
+Step 5 : MSB in mpfi format
+5 	4 	4 	5 	5 	4 	5 	5 	3 	
+Computing MSB on step 6 -----------------
+Step 6: MSB in mpfi format
+Step 6 : MSB in mpfi format
+5 	4 	4 	5 	5 	4 	5 	5 	4 	
+Computing MSB on step 7 -----------------
+Step 7: MSB in mpfi format
+Step 7 : MSB in mpfi format
+5 	4 	4 	5 	5 	4 	5 	5 	4 	
+########## FINAL Result #############################################
+Filter #1: 5 additional steps 
+--------------------------------------------------------------
+Wordlengths: 
+6 	6 	6 	6 	6 	6 	6 	6 	6 	
+MSBs: 
+5 	4 	4 	5 	5 	4 	5 	5 	4 	
+LSBs: 
+0 	-1 	-1 	0 	0 	-1 	0 	0 	-1 	
+####################################################################

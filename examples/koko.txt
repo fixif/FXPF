@@ -1,0 +1,88 @@
+					mpfr_prec_t prec = 64;
+
+					uint64_t n = Hz1.n;
+					uint64_t p = Hz1.p;
+					uint64_t q = Hz1.q;
+
+					mpfr_t *A;
+					A = allocateMPFRMatrix(n, n, prec);
+					doubleToMPFRMatrix(A, Hz1.A, n, n);
+
+					mpfr_t *B;
+					B = allocateMPFRMatrix(n, q, prec);
+					doubleToMPFRMatrix(B, Hz1.B, n, q);
+
+					mpfr_t *C;
+					C = allocateMPFRMatrix(p, n, prec);
+					doubleToMPFRMatrix(C, Hz1.C, p, n);
+
+					mpfr_t *D;
+					D = allocateMPFRMatrix(p, q, prec);
+					doubleToMPFRMatrix(D, Hz1.D, p, q);
+
+
+
+
+					int *lsb_x = (int*)malloc(n * sizeof(int));
+					int *lsb_y = (int*)malloc(p * sizeof(int));
+					int *msb_x = (int*)malloc(n * sizeof(int));
+					int *msb_y = (int*)malloc(p * sizeof(int));
+					for(i = 0; i < n; ++i)
+					{
+						lsb_x[i] = msb[i] - wl[i] + 1;
+						msb_x[i] = msb[i];
+					}
+					for(i = 0; i < p; ++i)
+					{
+						lsb_y[i] = msb[i] - wl[i] + 1;
+						msb_y[i] = msb[i];
+					}
+
+					/* Computing the upper and lower bounds on x, y, u */
+
+
+					// FILE *input = fopen("./examples/input_u_test2.txt", "r");
+					FILE *input = fopen("./examples/RAIM_input1.txt", "r");
+					FILE *output_exact = fopen("./examples/RAIM1_output_exact.txt", "w");
+					FILE *output_q = fopen("./examples/RAIM1_output_quantized.txt", "w");
+
+					if(!input)
+						fprintf(stderr, "Error opening file. \n");
+					if(!output_exact)
+						fprintf(stderr, "Error opening file. \n");
+					if(!output_q)
+						fprintf(stderr, "Error opening file. \n");
+
+					int Tfinal;
+					int tt;
+
+					mpfr_t *U_i;
+					fscanf(input, "%d %d", &Tfinal, &tt);
+					Tfinal = 200;
+					U_i = allocateMPFRMatrix(Tfinal, Hz1.q, 64);
+					printf("simulating the output Tfinal = %d \n", tt);
+					printf("simulating the output %d, and %d \n", -n, p);
+
+
+					mpfr_t *X_out = allocateMPFRMatrix(n, Tfinal, prec);
+					mpfr_t *Y_out = allocateMPFRMatrix(p, Tfinal, prec);
+
+					//for(i = 0; i < 1; ++i)
+					//{
+						 //int index = i - n;
+
+						 int index = 0;
+						 readMPFRMatrix(U_i, input, Tfinal, tt, MPFR_RNDN);
+						 writeMPFRMatrix(stderr, U_i, Tfinal, tt, 10, MPFR_RNDN);
+						 printf("simulating the output  \n");
+						 fprintf(output_exact, "Output exact \n");
+						 fprintf(output_q, "Output quantized  \n");
+						 simulateSS_SIMO(output_exact, output_q, index, X_out, Y_out, A, B, C, D, U_i, n, p, q, Tfinal - 1, lsb_x, lsb_y, msb_x, msb_y);
+						 fprintf(output_exact, "];\n");
+						 fprintf(output_q, "];\n");
+						 //printf("Verdict of the simulation %d: %d \n", i, simResult);
+						 index++;
+					//}
+
+
+

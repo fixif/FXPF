@@ -1,0 +1,644 @@
+anastasiialozanova@portablelozanova2 ~/W/s/l/F/FXPF_v1_asilomar> ./fxpf_test 
+
+<-----Result-----> Step 2: MSB in mpfi format
+6 1 
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[1.3199,1.3200]	
+Filter #1: 0 additional steps 
+--------Result--------
+Wordlengths: 
+64 	64 	64 	64 	64 	64 	
+MSBs: 
+40 	40 	40 	40 	40 	2 	
+LSBs: 
+-23 	-23 	-23 	-23 	-23 	-61 	
+----------------------
+
+<-----Result-----> Step 2: MSB in mpfi format
+6 1 
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[1.3199,1.3200]	
+Filter #1: 0 additional steps 
+--------Result--------
+Wordlengths: 
+63 	63 	63 	63 	63 	63 	
+MSBs: 
+40 	40 	40 	40 	40 	2 	
+LSBs: 
+-22 	-22 	-22 	-22 	-22 	-60 	
+----------------------
+
+<-----Result-----> Step 2: MSB in mpfi format
+6 1 
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[1.3199,1.3200]	
+Filter #1: 0 additional steps 
+--------Result--------
+Wordlengths: 
+62 	62 	62 	62 	62 	62 	
+MSBs: 
+40 	40 	40 	40 	40 	2 	
+LSBs: 
+-21 	-21 	-21 	-21 	-21 	-59 	
+----------------------
+
+<-----Result-----> Step 2: MSB in mpfi format
+6 1 
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[1.3199,1.3200]	
+Filter #1: 0 additional steps 
+--------Result--------
+Wordlengths: 
+61 	61 	61 	61 	61 	61 	
+MSBs: 
+40 	40 	40 	40 	40 	2 	
+LSBs: 
+-20 	-20 	-20 	-20 	-20 	-58 	
+----------------------
+
+<-----Result-----> Step 2: MSB in mpfi format
+6 1 
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[1.3199,1.3200]	
+Filter #1: 0 additional steps 
+--------Result--------
+Wordlengths: 
+60 	60 	60 	60 	60 	60 	
+MSBs: 
+40 	40 	40 	40 	40 	2 	
+LSBs: 
+-19 	-19 	-19 	-19 	-19 	-57 	
+----------------------
+
+<-----Result-----> Step 2: MSB in mpfi format
+6 1 
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[1.3199,1.3200]	
+Filter #1: 0 additional steps 
+--------Result--------
+Wordlengths: 
+59 	59 	59 	59 	59 	59 	
+MSBs: 
+40 	40 	40 	40 	40 	2 	
+LSBs: 
+-18 	-18 	-18 	-18 	-18 	-56 	
+----------------------
+
+<-----Result-----> Step 2: MSB in mpfi format
+6 1 
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[1.3199,1.3200]	
+Filter #1: 0 additional steps 
+--------Result--------
+Wordlengths: 
+58 	58 	58 	58 	58 	58 	
+MSBs: 
+40 	40 	40 	40 	40 	2 	
+LSBs: 
+-17 	-17 	-17 	-17 	-17 	-55 	
+----------------------
+
+<-----Result-----> Step 2: MSB in mpfi format
+6 1 
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[1.3199,1.3200]	
+Filter #1: 0 additional steps 
+--------Result--------
+Wordlengths: 
+57 	57 	57 	57 	57 	57 	
+MSBs: 
+40 	40 	40 	40 	40 	2 	
+LSBs: 
+-16 	-16 	-16 	-16 	-16 	-54 	
+----------------------
+
+<-----Result-----> Step 2: MSB in mpfi format
+6 1 
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[1.3199,1.3200]	
+Filter #1: 0 additional steps 
+--------Result--------
+Wordlengths: 
+56 	56 	56 	56 	56 	56 	
+MSBs: 
+40 	40 	40 	40 	40 	2 	
+LSBs: 
+-15 	-15 	-15 	-15 	-15 	-53 	
+----------------------
+
+<-----Result-----> Step 2: MSB in mpfi format
+6 1 
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[1.3200,1.3201]	
+Filter #1: 0 additional steps 
+--------Result--------
+Wordlengths: 
+55 	55 	55 	55 	55 	55 	
+MSBs: 
+40 	40 	40 	40 	40 	2 	
+LSBs: 
+-14 	-14 	-14 	-14 	-14 	-52 	
+----------------------
+
+<-----Result-----> Step 2: MSB in mpfi format
+6 1 
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[1.3201,1.3202]	
+Filter #1: 0 additional steps 
+--------Result--------
+Wordlengths: 
+54 	54 	54 	54 	54 	54 	
+MSBs: 
+40 	40 	40 	40 	40 	2 	
+LSBs: 
+-13 	-13 	-13 	-13 	-13 	-51 	
+----------------------
+
+<-----Result-----> Step 2: MSB in mpfi format
+6 1 
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[1.3202,1.3203]	
+Filter #1: 0 additional steps 
+--------Result--------
+Wordlengths: 
+53 	53 	53 	53 	53 	53 	
+MSBs: 
+40 	40 	40 	40 	40 	2 	
+LSBs: 
+-12 	-12 	-12 	-12 	-12 	-50 	
+----------------------
+
+<-----Result-----> Step 2: MSB in mpfi format
+6 1 
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[3.9424e1,3.9425e1]	
+[1.3205,1.3206]	
+Filter #1: 0 additional steps 
+--------Result--------
+Wordlengths: 
+52 	52 	52 	52 	52 	52 	
+MSBs: 
+40 	40 	40 	40 	40 	2 	
+LSBs: 
+-11 	-11 	-11 	-11 	-11 	-49 	
+----------------------
+
+<-----Result-----> Step 2: MSB in mpfi format
+6 1 
+[3.9425e1,3.9426e1]	
+[3.9425e1,3.9426e1]	
+[3.9425e1,3.9426e1]	
+[3.9425e1,3.9426e1]	
+[3.9425e1,3.9426e1]	
+[1.3210,1.3211]	
+Filter #1: 0 additional steps 
+--------Result--------
+Wordlengths: 
+51 	51 	51 	51 	51 	51 	
+MSBs: 
+40 	40 	40 	40 	40 	2 	
+LSBs: 
+-10 	-10 	-10 	-10 	-10 	-48 	
+----------------------
+
+<-----Result-----> Step 2: MSB in mpfi format
+6 1 
+[3.9426e1,3.9427e1]	
+[3.9426e1,3.9427e1]	
+[3.9426e1,3.9427e1]	
+[3.9426e1,3.9427e1]	
+[3.9426e1,3.9427e1]	
+[1.3222,1.3223]	
+Filter #1: 0 additional steps 
+--------Result--------
+Wordlengths: 
+50 	50 	50 	50 	50 	50 	
+MSBs: 
+40 	40 	40 	40 	40 	2 	
+LSBs: 
+-9 	-9 	-9 	-9 	-9 	-47 	
+----------------------
+
+<-----Result-----> Step 2: MSB in mpfi format
+6 1 
+[3.9428e1,3.9429e1]	
+[3.9428e1,3.9429e1]	
+[3.9428e1,3.9429e1]	
+[3.9428e1,3.9429e1]	
+[3.9428e1,3.9429e1]	
+[1.3244,1.3245]	
+Filter #1: 0 additional steps 
+--------Result--------
+Wordlengths: 
+49 	49 	49 	49 	49 	49 	
+MSBs: 
+40 	40 	40 	40 	40 	2 	
+LSBs: 
+-8 	-8 	-8 	-8 	-8 	-46 	
+----------------------
+
+<-----Result-----> Step 2: MSB in mpfi format
+6 1 
+[3.9433e1,3.9434e1]	
+[3.9433e1,3.9434e1]	
+[3.9433e1,3.9434e1]	
+[3.9433e1,3.9434e1]	
+[3.9433e1,3.9434e1]	
+[1.3289,1.3290]	
+Filter #1: 0 additional steps 
+--------Result--------
+Wordlengths: 
+48 	48 	48 	48 	48 	48 	
+MSBs: 
+40 	40 	40 	40 	40 	2 	
+LSBs: 
+-7 	-7 	-7 	-7 	-7 	-45 	
+----------------------
+
+<-----Result-----> Step 2: MSB in mpfi format
+6 1 
+[3.9442e1,3.9443e1]	
+[3.9442e1,3.9443e1]	
+[3.9442e1,3.9443e1]	
+[3.9442e1,3.9443e1]	
+[3.9442e1,3.9443e1]	
+[1.3378,1.3379]	
+Filter #1: 0 additional steps 
+--------Result--------
+Wordlengths: 
+47 	47 	47 	47 	47 	47 	
+MSBs: 
+40 	40 	40 	40 	40 	2 	
+LSBs: 
+-6 	-6 	-6 	-6 	-6 	-44 	
+----------------------
+
+<-----Result-----> Step 2: MSB in mpfi format
+6 1 
+[3.9459e1,3.9460e1]	
+[3.9459e1,3.9460e1]	
+[3.9459e1,3.9460e1]	
+[3.9459e1,3.9460e1]	
+[3.9459e1,3.9460e1]	
+[1.3555,1.3556]	
+Filter #1: 0 additional steps 
+--------Result--------
+Wordlengths: 
+46 	46 	46 	46 	46 	46 	
+MSBs: 
+40 	40 	40 	40 	40 	2 	
+LSBs: 
+-5 	-5 	-5 	-5 	-5 	-43 	
+----------------------
+
+<-----Result-----> Step 2: MSB in mpfi format
+6 1 
+[3.9494e1,3.9495e1]	
+[3.9494e1,3.9495e1]	
+[3.9494e1,3.9495e1]	
+[3.9494e1,3.9495e1]	
+[3.9494e1,3.9495e1]	
+[1.3903,1.3904]	
+Filter #1: 0 additional steps 
+--------Result--------
+Wordlengths: 
+45 	45 	45 	45 	45 	45 	
+MSBs: 
+40 	40 	40 	40 	40 	2 	
+LSBs: 
+-4 	-4 	-4 	-4 	-4 	-42 	
+----------------------
+
+<-----Result-----> Step 2: MSB in mpfi format
+6 1 
+[3.9561e1,3.9562e1]	
+[3.9561e1,3.9562e1]	
+[3.9561e1,3.9562e1]	
+[3.9561e1,3.9562e1]	
+[3.9561e1,3.9562e1]	
+[1.4574,1.4575]	
+Filter #1: 0 additional steps 
+--------Result--------
+Wordlengths: 
+44 	44 	44 	44 	44 	44 	
+MSBs: 
+40 	40 	40 	40 	40 	2 	
+LSBs: 
+-3 	-3 	-3 	-3 	-3 	-41 	
+----------------------
+
+<-----Result-----> Step 2: MSB in mpfi format
+6 1 
+[3.9687e1,3.9688e1]	
+[3.9687e1,3.9688e1]	
+[3.9687e1,3.9688e1]	
+[3.9687e1,3.9688e1]	
+[3.9687e1,3.9688e1]	
+[1.5829,1.5830]	
+Filter #1: 0 additional steps 
+--------Result--------
+Wordlengths: 
+43 	43 	43 	43 	43 	43 	
+MSBs: 
+40 	40 	40 	40 	40 	2 	
+LSBs: 
+-2 	-2 	-2 	-2 	-2 	-40 	
+----------------------
+
+<-----Result-----> Step 2: MSB in mpfi format
+6 1 
+[3.9909e1,3.9910e1]	
+[3.9909e1,3.9910e1]	
+[3.9909e1,3.9910e1]	
+[3.9909e1,3.9910e1]	
+[3.9909e1,3.9910e1]	
+[1.8053,1.8054]	
+Filter #1: 0 additional steps 
+--------Result--------
+Wordlengths: 
+42 	42 	42 	42 	42 	42 	
+MSBs: 
+40 	40 	40 	40 	40 	2 	
+LSBs: 
+-1 	-1 	-1 	-1 	-1 	-39 	
+----------------------
+
+<-----Result-----> Step 2: MSB in mpfi format
+6 1 
+[4.0272e1,4.0273e1]	
+[4.0272e1,4.0273e1]	
+[4.0272e1,4.0273e1]	
+[4.0272e1,4.0273e1]	
+[4.0272e1,4.0273e1]	
+[2.1678,2.1679]	
+Computing MSB on step 3 -----------------
+Step 3: MSB in mpfi format
+1 6 
+[4.4150e1,4.4151e1]	[4.4150e1,4.4151e1]	[4.4150e1,4.4151e1]	[4.4150e1,4.4151e1]	[4.4150e1,4.4151e1]	[6.0434,6.0435]	
+Step 3 : MSB in mpfi format
+45 	45 	45 	45 	45 	7 	
+Computing MSB on step 4 -----------------
+Step 4: MSB in mpfi format
+1 6 
+[4.5122e1,4.5123e1]	[4.5122e1,4.5123e1]	[4.5122e1,4.5123e1]	[4.5122e1,4.5123e1]	[4.5122e1,4.5123e1]	[7.0158,7.0159]	
+Step 4 : MSB in mpfi format
+46 	46 	46 	46 	46 	8 	
+Computing MSB on step 5 -----------------
+Step 5: MSB in mpfi format
+1 6 
+[4.6108e1,4.6109e1]	[4.6108e1,4.6109e1]	[4.6108e1,4.6109e1]	[4.6108e1,4.6109e1]	[4.6108e1,4.6109e1]	[8.0019,8.0020]	
+Step 5 : MSB in mpfi format
+47 	47 	47 	47 	47 	9 	
+Computing MSB on step 6 -----------------
+Step 6: MSB in mpfi format
+1 6 
+[4.7101e1,4.7102e1]	[4.7101e1,4.7102e1]	[4.7101e1,4.7102e1]	[4.7101e1,4.7102e1]	[4.7101e1,4.7102e1]	[8.9948,8.9949]	
+Step 6 : MSB in mpfi format
+48 	48 	48 	48 	48 	9 	
+Computing MSB on step 7 -----------------
+Step 7: MSB in mpfi format
+1 6 
+[4.8098e1,4.8099e1]	[4.8098e1,4.8099e1]	[4.8098e1,4.8099e1]	[4.8098e1,4.8099e1]	[4.8098e1,4.8099e1]	[9.9913,9.9914]	
+Step 7 : MSB in mpfi format
+49 	49 	49 	49 	49 	10 	
+Computing MSB on step 8 -----------------
+Step 8: MSB in mpfi format
+1 6 
+[4.9096e1,4.9097e1]	[4.9096e1,4.9097e1]	[4.9096e1,4.9097e1]	[4.9096e1,4.9097e1]	[4.9096e1,4.9097e1]	[1.0989e1,1.0990e1]	
+Step 8 : MSB in mpfi format
+50 	50 	50 	50 	50 	11 	
+Computing MSB on step 9 -----------------
+Step 9: MSB in mpfi format
+1 6 
+[5.0095e1,5.0096e1]	[5.0095e1,5.0096e1]	[5.0095e1,5.0096e1]	[5.0095e1,5.0096e1]	[5.0095e1,5.0096e1]	[1.1988e1,1.1989e1]	
+Step 9 : MSB in mpfi format
+51 	51 	51 	51 	51 	12 	
+Computing MSB on step 10 -----------------
+Step 10: MSB in mpfi format
+1 6 
+[5.1095e1,5.1096e1]	[5.1095e1,5.1096e1]	[5.1095e1,5.1096e1]	[5.1095e1,5.1096e1]	[5.1095e1,5.1096e1]	[1.2988e1,1.2989e1]	
+Step 10 : MSB in mpfi format
+52 	52 	52 	52 	52 	13 	
+Computing MSB on step 11 -----------------
+Step 11: MSB in mpfi format
+1 6 
+[5.2094e1,5.2095e1]	[5.2094e1,5.2095e1]	[5.2094e1,5.2095e1]	[5.2094e1,5.2095e1]	[5.2094e1,5.2095e1]	[1.3988e1,1.3989e1]	
+Step 11 : MSB in mpfi format
+53 	53 	53 	53 	53 	14 	
+Computing MSB on step 12 -----------------
+Step 12: MSB in mpfi format
+1 6 
+[5.3094e1,5.3095e1]	[5.3094e1,5.3095e1]	[5.3094e1,5.3095e1]	[5.3094e1,5.3095e1]	[5.3094e1,5.3095e1]	[1.4987e1,1.4988e1]	
+Step 12 : MSB in mpfi format
+54 	54 	54 	54 	54 	15 	
+Computing MSB on step 13 -----------------
+Step 13: MSB in mpfi format
+1 6 
+[5.4094e1,5.4095e1]	[5.4094e1,5.4095e1]	[5.4094e1,5.4095e1]	[5.4094e1,5.4095e1]	[5.4094e1,5.4095e1]	[1.5987e1,1.5988e1]	
+Step 13 : MSB in mpfi format
+55 	55 	55 	55 	55 	16 	
+Computing MSB on step 14 -----------------
+Step 14: MSB in mpfi format
+1 6 
+[5.5094e1,5.5095e1]	[5.5094e1,5.5095e1]	[5.5094e1,5.5095e1]	[5.5094e1,5.5095e1]	[5.5094e1,5.5095e1]	[1.6987e1,1.6988e1]	
+Step 14 : MSB in mpfi format
+56 	56 	56 	56 	56 	17 	
+Computing MSB on step 15 -----------------
+Step 15: MSB in mpfi format
+1 6 
+[5.6094e1,5.6095e1]	[5.6094e1,5.6095e1]	[5.6094e1,5.6095e1]	[5.6094e1,5.6095e1]	[5.6094e1,5.6095e1]	[1.7987e1,1.7988e1]	
+Step 15 : MSB in mpfi format
+57 	57 	57 	57 	57 	18 	
+Computing MSB on step 16 -----------------
+Step 16: MSB in mpfi format
+1 6 
+[5.7094e1,5.7095e1]	[5.7094e1,5.7095e1]	[5.7094e1,5.7095e1]	[5.7094e1,5.7095e1]	[5.7094e1,5.7095e1]	[1.8987e1,1.8988e1]	
+Step 16 : MSB in mpfi format
+58 	58 	58 	58 	58 	19 	
+Computing MSB on step 17 -----------------
+Step 17: MSB in mpfi format
+1 6 
+[5.8094e1,5.8095e1]	[5.8094e1,5.8095e1]	[5.8094e1,5.8095e1]	[5.8094e1,5.8095e1]	[5.8094e1,5.8095e1]	[1.9987e1,1.9988e1]	
+Step 17 : MSB in mpfi format
+59 	59 	59 	59 	59 	20 	
+Computing MSB on step 18 -----------------
+Step 18: MSB in mpfi format
+1 6 
+[5.9094e1,5.9095e1]	[5.9094e1,5.9095e1]	[5.9094e1,5.9095e1]	[5.9094e1,5.9095e1]	[5.9094e1,5.9095e1]	[2.0987e1,2.0988e1]	
+Step 18 : MSB in mpfi format
+60 	60 	60 	60 	60 	21 	
+Computing MSB on step 19 -----------------
+Step 19: MSB in mpfi format
+1 6 
+[6.0094e1,6.0095e1]	[6.0094e1,6.0095e1]	[6.0094e1,6.0095e1]	[6.0094e1,6.0095e1]	[6.0094e1,6.0095e1]	[2.1987e1,2.1988e1]	
+Step 19 : MSB in mpfi format
+61 	61 	61 	61 	61 	22 	
+Computing MSB on step 20 -----------------
+Step 20: MSB in mpfi format
+1 6 
+[6.1094e1,6.1095e1]	[6.1094e1,6.1095e1]	[6.1094e1,6.1095e1]	[6.1094e1,6.1095e1]	[6.1094e1,6.1095e1]	[2.2987e1,2.2988e1]	
+Step 20 : MSB in mpfi format
+62 	62 	62 	62 	62 	23 	
+Computing MSB on step 21 -----------------
+Step 21: MSB in mpfi format
+1 6 
+[6.2094e1,6.2095e1]	[6.2094e1,6.2095e1]	[6.2094e1,6.2095e1]	[6.2094e1,6.2095e1]	[6.2094e1,6.2095e1]	[2.3987e1,2.3988e1]	
+Step 21 : MSB in mpfi format
+63 	63 	63 	63 	63 	24 	
+Computing MSB on step 22 -----------------
+Step 22: MSB in mpfi format
+1 6 
+[6.3094e1,6.3095e1]	[6.3094e1,6.3095e1]	[6.3094e1,6.3095e1]	[6.3094e1,6.3095e1]	[6.3094e1,6.3095e1]	[2.4987e1,2.4988e1]	
+Step 22 : MSB in mpfi format
+64 	64 	64 	64 	64 	25 	
+Computing MSB on step 23 -----------------
+Step 23: MSB in mpfi format
+1 6 
+[6.4094e1,6.4095e1]	[6.4094e1,6.4095e1]	[6.4094e1,6.4095e1]	[6.4094e1,6.4095e1]	[6.4094e1,6.4095e1]	[2.5987e1,2.5988e1]	
+Step 23 : MSB in mpfi format
+65 	65 	65 	65 	65 	26 	
+Computing MSB on step 24 -----------------
+Step 24: MSB in mpfi format
+1 6 
+[6.5094e1,6.5095e1]	[6.5094e1,6.5095e1]	[6.5094e1,6.5095e1]	[6.5094e1,6.5095e1]	[6.5094e1,6.5095e1]	[2.6987e1,2.6988e1]	
+Step 24 : MSB in mpfi format
+66 	66 	66 	66 	66 	27 	
+Computing MSB on step 25 -----------------
+Step 25: MSB in mpfi format
+1 6 
+[6.6094e1,6.6095e1]	[6.6094e1,6.6095e1]	[6.6094e1,6.6095e1]	[6.6094e1,6.6095e1]	[6.6094e1,6.6095e1]	[2.7987e1,2.7988e1]	
+Step 25 : MSB in mpfi format
+67 	67 	67 	67 	67 	28 	
+Computing MSB on step 26 -----------------
+Step 26: MSB in mpfi format
+1 6 
+[6.7094e1,6.7095e1]	[6.7094e1,6.7095e1]	[6.7094e1,6.7095e1]	[6.7094e1,6.7095e1]	[6.7094e1,6.7095e1]	[2.8987e1,2.8988e1]	
+Step 26 : MSB in mpfi format
+68 	68 	68 	68 	68 	29 	
+Computing MSB on step 27 -----------------
+Step 27: MSB in mpfi format
+1 6 
+[6.8094e1,6.8095e1]	[6.8094e1,6.8095e1]	[6.8094e1,6.8095e1]	[6.8094e1,6.8095e1]	[6.8094e1,6.8095e1]	[2.9987e1,2.9988e1]	
+Step 27 : MSB in mpfi format
+69 	69 	69 	69 	69 	30 	
+Computing MSB on step 28 -----------------
+Step 28: MSB in mpfi format
+1 6 
+[6.9094e1,6.9095e1]	[6.9094e1,6.9095e1]	[6.9094e1,6.9095e1]	[6.9094e1,6.9095e1]	[6.9094e1,6.9095e1]	[3.0987e1,3.0988e1]	
+Step 28 : MSB in mpfi format
+70 	70 	70 	70 	70 	31 	
+Computing MSB on step 29 -----------------
+Step 29: MSB in mpfi format
+1 6 
+[7.0094e1,7.0095e1]	[7.0094e1,7.0095e1]	[7.0094e1,7.0095e1]	[7.0094e1,7.0095e1]	[7.0094e1,7.0095e1]	[3.1987e1,3.1988e1]	
+Step 29 : MSB in mpfi format
+71 	71 	71 	71 	71 	32 	
+Computing MSB on step 30 -----------------
+Step 30: MSB in mpfi format
+1 6 
+[7.1094e1,7.1095e1]	[7.1094e1,7.1095e1]	[7.1094e1,7.1095e1]	[7.1094e1,7.1095e1]	[7.1094e1,7.1095e1]	[3.2987e1,3.2988e1]	
+Step 30 : MSB in mpfi format
+72 	72 	72 	72 	72 	33 	
+Computing MSB on step 31 -----------------
+Step 31: MSB in mpfi format
+1 6 
+[7.2094e1,7.2095e1]	[7.2094e1,7.2095e1]	[7.2094e1,7.2095e1]	[7.2094e1,7.2095e1]	[7.2094e1,7.2095e1]	[3.3987e1,3.3988e1]	
+Step 31 : MSB in mpfi format
+73 	73 	73 	73 	73 	34 	
+Computing MSB on step 32 -----------------
+Step 32: MSB in mpfi format
+1 6 
+[7.3094e1,7.3095e1]	[7.3094e1,7.3095e1]	[7.3094e1,7.3095e1]	[7.3094e1,7.3095e1]	[7.3094e1,7.3095e1]	[3.4987e1,3.4988e1]	
+Step 32 : MSB in mpfi format
+74 	74 	74 	74 	74 	35 	
+Computing MSB on step 33 -----------------
+Step 33: MSB in mpfi format
+1 6 
+[7.4094e1,7.4095e1]	[7.4094e1,7.4095e1]	[7.4094e1,7.4095e1]	[7.4094e1,7.4095e1]	[7.4094e1,7.4095e1]	[3.5987e1,3.5988e1]	
+Step 33 : MSB in mpfi format
+75 	75 	75 	75 	75 	36 	
+Computing MSB on step 34 -----------------
+Step 34: MSB in mpfi format
+1 6 
+[7.5094e1,7.5095e1]	[7.5094e1,7.5095e1]	[7.5094e1,7.5095e1]	[7.5094e1,7.5095e1]	[7.5094e1,7.5095e1]	[3.6987e1,3.6988e1]	
+Step 34 : MSB in mpfi format
+76 	76 	76 	76 	76 	37 	
+Computing MSB on step 35 -----------------
+Step 35: MSB in mpfi format
+1 6 
+[7.6094e1,7.6095e1]	[7.6094e1,7.6095e1]	[7.6094e1,7.6095e1]	[7.6094e1,7.6095e1]	[7.6094e1,7.6095e1]	[3.7987e1,3.7988e1]	
+Step 35 : MSB in mpfi format
+77 	77 	77 	77 	77 	38 	
+Computing MSB on step 36 -----------------
+Step 36: MSB in mpfi format
+1 6 
+[7.7094e1,7.7095e1]	[7.7094e1,7.7095e1]	[7.7094e1,7.7095e1]	[7.7094e1,7.7095e1]	[7.7094e1,7.7095e1]	[3.8987e1,3.8988e1]	
+Step 36 : MSB in mpfi format
+78 	78 	78 	78 	78 	39 	
+Computing MSB on step 37 -----------------
+Step 37: MSB in mpfi format
+1 6 
+[7.8094e1,7.8095e1]	[7.8094e1,7.8095e1]	[7.8094e1,7.8095e1]	[7.8094e1,7.8095e1]	[7.8094e1,7.8095e1]	[3.9987e1,3.9988e1]	
+Step 37 : MSB in mpfi format
+79 	79 	79 	79 	79 	40 	
+Computing MSB on step 38 -----------------
+Step 38: MSB in mpfi format
+1 6 
+[7.9094e1,7.9095e1]	[7.9094e1,7.9095e1]	[7.9094e1,7.9095e1]	[7.9094e1,7.9095e1]	[7.9094e1,7.9095e1]	[4.0987e1,4.0988e1]	
+Step 38 : MSB in mpfi format
+80 	80 	80 	80 	80 	41 	
+Error: LSB reached point when it is larger than initial MSB estimation on Step 1!
+msb_step1 = 40 and lsb_current = 41 
+ERROR: Could not determine the MSB for step 39. 
+Error determining Fixed-Point Formats.

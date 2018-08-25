@@ -1,0 +1,53 @@
+Example file: /Users/anastasiialozanova/Work/svn/lozanova/FXPF/FXPF_v1_asilomar/examples/test_RAIM.txt
+Matrix A
+1.856084e-02 	5.735571e-01 	-1.571995e-01 	-4.074225e-02 	-1.402553e-02 	
+5.735571e-01 	-2.568083e-01 	-1.034262e-01 	-3.177575e-01 	-2.885473e-01 	
+-1.571995e-01 	-1.034262e-01 	-7.719955e-01 	3.412317e-01 	-4.533581e-02 	
+-4.074225e-02 	-3.177575e-01 	3.412317e-01 	-1.588512e-02 	-3.390810e-01 	
+-1.402553e-02 	-2.885473e-01 	-4.533581e-02 	-3.390810e-01 	-2.569737e-02 	
+Matrix B
+0.000000e+00 	
+-6.030127e-01 	
+-1.923276e+00 	
+-1.200161e+00 	
+8.568476e-01 	
+Matrix C
+1.208185e+00 	0.000000e+00 	0.000000e+00 	0.000000e+00 	9.071343e-01 	
+Matrix D
+-1.379004e+00 	
+/*-----------------------------------------------------------------------*/
+ 				Testing WCPG general function 
+/*-----------------------------------------------------------------------*/
+
+Worst-case Peak Gain:
+1 1 
+7.7204255628255425884e2	
+
+Additional information on WCPG computation: 
+
+Truncation order N: 352158
+1 - rho(A): 
+1.4406e-4
+Inversion iterations: 2 
+max(S_N): 
+7.7204e2
+min(S_N): 
+7.7204e2
+Overall time spent: 8.77 
+N computation time: 0.00 
+Summation time: 8.76 
+Maximum precision of U = inv(V): 180 
+Maximum precision of P_N: 94 
+Maximum precision of S_N: 92 
+/*-----------------------------------------------------------------------*/
+ 				Testing WCPG_ABCD 
+/*-----------------------------------------------------------------------*/
+
+Worst-case Peak Gain of WCPG_ABCD:
+7.720426e+02 	
+/*-----------------------------------------------------------------------*/
+ 				Testing WCPG_ABCD_mprec 
+/*-----------------------------------------------------------------------*/
+
+Worst-case Peak Gain of WCPG_ABCD_mprec:
+7.720426e+02 	
