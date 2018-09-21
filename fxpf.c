@@ -590,11 +590,11 @@ int msb_step2(mpfi_t *msb, uint64_t *msb_left, uint64_t *msb_right, filter *Hz1,
 		return 0;
 	}	
 	
-	// fprintf(stderr, "\n <---------Debug-------->\nWCPG_Hz1 matrix: \n");
-	// writeMPFRMatrix(stderr, WCPG_Hz1, Hz1->p, Hz1->q, 10, MPFR_RNDN);
+	 //fprintf(stderr, "\n <---------Debug-------->\nWCPG_Hz1 matrix: \n");
+	 //writeMPFRMatrix(stderr, WCPG_Hz1, Hz1->p, Hz1->q, 10, MPFR_RNDN);
 
-	// fprintf(stderr, "\n <---------Debug-------->\nWCPG_Delta matrix: \n");
-	// writeMPFRMatrix(stderr, WCPG_Delta, Delta->p, Delta->q, 10, MPFR_RNDN);
+	 //fprintf(stderr, "\n <---------Debug-------->\nWCPG_Delta matrix: \n");
+	 //writeMPFRMatrix(stderr, WCPG_Delta, Delta->p, Delta->q, 10, MPFR_RNDN);
 
 	
 	
@@ -877,7 +877,7 @@ int computeLSB(int *lsb, uint64_t *msb, uint64_t *w, uint64_t length)
 	for(i = 0; i < length; ++i)
 	{
 		lsb[i] = msb[i] - w[i] + 1;
-		// printf("compute LSB: lsb[%d] = msb[i] - w[i] + 1 = %lld - %lld + 1 \n", i, lsb[i], msb[i], w[i] );
+	 fprintf(stderr, "compute LSB: lsb[%d] = msb[i] - w[i] + 1 = %lld - %lld + 1 \n", i, lsb[i], msb[i], w[i] );
 	}
 	return 1;
 }
@@ -886,7 +886,7 @@ int computeLSB(int *lsb, uint64_t *msb, uint64_t *w, uint64_t length)
 /* For a LTI IIR filter in state-space representation H={A,B,C,D}, bound on input values 
 u and wordlegths for state- and output-variable representation the function, if possible,
 determines Fixed-Point Formats for its state- and output-variables such that no overflow 
-occurs.
+occurs. <<<<>
 Algorithm consists in a loop around step1 and step2 parts.
 
 TODO: finish description
@@ -928,7 +928,7 @@ int determineFXPF(uint64_t *msb, int *lsb, filter *H, uint64_t *wl, fxpf_result 
 	}	
 	
 	  //fprintf(stderr, "\n Step 1: MSB in mpfi format\n");
-	 // writeMPFIMatrix(stderr, msb_Hz1, Hz1.p, 1, 5);
+	  //writeMPFIMatrix(stderr, msb_Hz1, Hz1.p, 1, 5);
 	  //printf("Step 1: MSB interval infinum \n");
 	  //UINT64MatrixPrint(stderr, msb_inf_Hz1, 1, Hz1.p);
 	  //printf("\n Step 1:  interval supremum \n");
@@ -974,10 +974,10 @@ int determineFXPF(uint64_t *msb, int *lsb, filter *H, uint64_t *wl, fxpf_result 
 	}
 
 	
-	 //fprintf(stderr, "\n Step 2: MSB in mpfi format\n");
-	//// writeMPFIMatrix(stderr, msb_step2_interval, Hz1.p, 1, 5);
-	//// printf("Step 2: MSB in mpfi format\n");
-	// UINT64MatrixPrint(stderr, msb_inf_step2, 1, Hz1.p);
+	//fprintf(stderr, "\n Step 2: MSB in mpfi format\n");
+	//writeMPFIMatrix(stderr, msb_step2_interval, Hz1.p, 1, 5);
+	//printf("Step 2: MSB \n");
+	//UINT64MatrixPrint(stderr, msb_sup_step2, 1, Hz1.p);
 
 	uint64_t *msb_new = (uint64_t*)calloc(Hz1.p, Hz1.p * sizeof(uint64_t)); 
 	uint64_t *msb_z = (uint64_t*)calloc(Hz1.p, Hz1.p * sizeof(uint64_t)); 
@@ -987,16 +987,16 @@ int determineFXPF(uint64_t *msb, int *lsb, filter *H, uint64_t *wl, fxpf_result 
 	if(!checkMSB(msb_new, msb_inf_Hz1, msb_sup_Hz1, msb_sup_step2, 1, Hz1.p))	//if format changed 
 	{
 		/*We are in the case when first check of MSB has not passed. */
-		// fprintf(stderr, "\n <-----Result----> The first check if msb_step2 is equal has not passed.\n");
+		 //fprintf(stderr, "\n <-----Result----> The first check if msb_step2 is equal has not passed.\n");
 
 		while(!flag_OK && steps < 10)
 		{
 
-			// fprintf(stderr, "We are in the case, when msb_step2 is larger than msb_Hz1. \n");
-			// fprintf(stderr, "Steps = %d: MSB msb_step2_interval in mpfi format\n", steps );
-			// writeMPFIMatrix(stderr, msb_step2_interval, Hz1.p, 1, 25);
-			// fprintf(stderr, "Steps = %d: MSB msb_Hz1 in mpfi format from Step 1. \n", steps );
-			// writeMPFIMatrix(stderr, msb_Hz1, Hz1.p, 1, 25);
+			 //fprintf(stderr, "We are in the case, when msb_step2 is larger than msb_Hz1. \n");
+			 //fprintf(stderr, "Steps = %d: MSB msb_step2_interval in mpfi format\n", steps );
+			 //writeMPFIMatrix(stderr, msb_step2_interval, Hz1.p, 1, 25);
+			 //fprintf(stderr, "Steps = %d: MSB msb_Hz1 in mpfi format from Step 1. \n", steps );
+			 //writeMPFIMatrix(stderr, msb_Hz1, Hz1.p, 1, 25);
 
 			steps++;
 			/* Set the current estimation on MSBs to the corrected vector.
@@ -1022,17 +1022,18 @@ int determineFXPF(uint64_t *msb, int *lsb, filter *H, uint64_t *wl, fxpf_result 
 				return -1;
 			}
 				 // printf("Computing MSB on step %d -----------------\n",2 + steps  );
-				  fprintf(stderr, "Step %d: MSB:\n", 2 + steps );
+				 // fprintf(stderr, "Step %d: MSB:\n", 2 + steps );
 				 // writeMPFIMatrix(stderr, msb_step2_interval, 1, Hz1.p, 5);
 				 // printf("Step %d : MSB in mpfi format\n", 2 + steps  );
 				 // UINT64MatrixPrint(stderr, msb_inf_step2, 1, Hz1.p);
 				  // printf("Step %d : MSB in mpfi format\n", 2 + steps  );
-				   UINT64MatrixPrint(stderr, msb_sup_step2,  1, Hz1.p);
-				   fprintf(stderr, "Step %d: LSB:\n", 2 + steps );
+				   //UINT64MatrixPrint(stderr, msb_sup_step2,  1, Hz1.p);
+				   //fprintf(stderr, "Step %d: LSB:\n", 2 + steps );
 
 				   	for(int i = 0; i < Hz1.p; ++i)
 		            {
-			            fprintf(stderr," %d \t ", msb_sup_step2[i] - wl[i] + 1);
+			            //fprintf(stderr," %d \t ", msb_sup_step2[i] - wl[i] + 1);
+			            //fprintf(stderr, "compute LSB: lsb[%d] = msb[i] - w[i] + 1 = %lld - %lld + 1 = \n", i, msb_sup_step2[i], wl[i], msb_sup_step2[i] - wl[i] + 1 );
 		            }
 		            fprintf(stderr, "\n");
 
@@ -1107,11 +1108,11 @@ int determineFXPF(uint64_t *msb, int *lsb, filter *H, uint64_t *wl, fxpf_result 
 Returns 1 if OK, and zero if some changes were applied to vector msb_new */
 int checkMSB(uint64_t *msb_new, uint64_t *msb1_inf, uint64_t *msb1_sup, uint64_t *msb2, uint64_t stage, uint64_t length)
 {
-	// ("\nChecking MSB_diamond against MSB....\n");
-	// printf("\nMSB_z:\n");
-	// UINT64MatrixPrint(stderr, msb1_inf, 1, length);
-	// printf("\nMSB_z_diamond:\n");
-	// UINT64MatrixPrint(stderr, msb2, 1, length);
+	// fprintf(stderr, "\nChecking MSB_diamond against MSB....\n");
+	// fprintf(stderr, "\nMSB_z:\n");
+	// UINT64MatrixPrint(stderr, msb1_sup, 1, length);
+	// fprintf(stderr, "\nMSB_z_diamond:\n");
+	 // UINT64MatrixPrint(stderr, msb2, 1, length);
 	
 	int i;
 	int flag = 1;
@@ -1130,6 +1131,7 @@ int checkMSB(uint64_t *msb_new, uint64_t *msb1_inf, uint64_t *msb1_sup, uint64_t
 		}
 		else if (stage == 2)
 		{
+		 //printf("msb2[%d] = %llu, msb1_sup[%d] = %llu\n", i,msb2[i], i, msb1_sup[i] );
 			if(msb2[i] > msb1_sup[i])
 			{
 				flag = 0;

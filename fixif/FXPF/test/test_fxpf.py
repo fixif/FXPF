@@ -154,7 +154,7 @@ def iter_random_ABCD(number, n=(5, 10), p=(1, 5), q=(1, 5), pRepeat=0.01, pReal=
 
 
 def test_FXPF_simple():
-	wl = numpy.array([16, 16, 16, 16])
+	wl = numpy.array([12, 12, 12, 12])
 
 	A = numpy.array([[2.076913426318702e+00,-1.534298334880014e+00, 3.908833248284007e-01],
 					 [1.0, 0, 0],[0, 1.0, 0]])
