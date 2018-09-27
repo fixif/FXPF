@@ -164,13 +164,13 @@ def test_FXPF_simple():
 	u_bound = numpy.array([1.0])
 	msb, lsb, error, additionalSteps = FXPF_ABCD(A, B, C, D, u_bound, wl)
 
-	print("\n FXPF are determined using %s additional steps.") % (mat(additionalSteps))
+	print("\n FXPF are determined using %s additional steps." % (mat(additionalSteps)))
 	print("The system is:")
 	print (mat(A), B, C, D)
-	print ("Wordlengths: %s") % (wl)
-	print ("MSBs: %s") % (msb)
-	print("LSBs: %s") % (lsb)
-	print("Errors: %s") % (error)
+	print ("Wordlengths: %s" % (wl))
+	print ("MSBs: %s" % (msb))
+	print("LSBs: %s" % (lsb))
+	print("Errors: %s" % (error))
 
 
 @pytest.mark.parametrize("S", iter_random_ABCD(1, (5, 10), (1, 2), (1, 2), pBCmask=0.1))
@@ -182,12 +182,12 @@ def test_FXPF(S):
 
 	u_bound = numpy.array([1.0])
 	msb, lsb, error, additionalSteps = FXPF_ABCD(A, B, C, D, u_bound, wl)
-	print("\n FXPF are determined using %s additional steps.") % (mat(additionalSteps))
-	print("The system is: \n A=%s \n B= %s \n C=%s \n D= %s \n") %(A, B, C, D)
-	print ("Wordlengths: %s") % (wl)
-	print ("MSBs: %s") % (msb)
-	print("LSBs: %s") % (lsb)
-	print("Errors: %s") % (error)
+	print("\n FXPF are determined using %s additional steps." % mat(additionalSteps))
+	print("The system is: \n A=%s \n B= %s \n C=%s \n D= %s \n" %(A, B, C, D))
+	print ("Wordlengths: %s" % (wl))
+	print ("MSBs: %s" % (msb))
+	print("LSBs: %s" % (lsb))
+	print("Errors: %s" % (error))
 
 
 
@@ -200,12 +200,12 @@ def test_FXPF(S):
 
 	u_bound = numpy.array([1.0])
 	msb, lsb, error, additionalSteps = FXPF_ABCD(A, B, C, D, u_bound, wl)
-	print("\n FXPF are determined using %s additional steps.") % (mat(additionalSteps))
-	print("The system is: \n A=%s \n B= %s \n C=%s \n D= %s \n") %(A, B, C, D)
-	print ("Wordlengths: %s") % (wl)
-	print ("MSBs: %s") % (msb)
-	print("Errors: %s") % (error)
-	print("LSBs: %s") % (lsb)
+	print("\n FXPF are determined using %s additional steps." % (mat(additionalSteps)))
+	print("The system is: \n A=%s \n B= %s \n C=%s \n D= %s \n" %(A, B, C, D))
+	print("Wordlengths: %s" % (wl))
+	print("MSBs: %s" % (msb))
+	print("Errors: %s" % (error))
+	print("LSBs: %s" % (lsb))
 
 def test_FXPF_readme():
 	FXPF_readme()
