@@ -327,4 +327,9 @@ fabric.properties
 
 # add
 .deps/
-.libs/exampleProgram
+.libs/
+m4/
+libtool
+Makefile
+fxpf_test
+ChangeLog
