@@ -326,7 +326,7 @@ fabric.properties
 
 
 # add
-!ma4/.empty
+!m4/.empty
 .deps/
 .libs/
 m4/
