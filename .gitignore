@@ -326,12 +326,13 @@ fabric.properties
 
 
 # add
-!m4/.empty
 .deps/
 .libs/
 m4/
+!m4/.empty
 libtool
 Makefile
 fxpf_test
 ChangeLog
 config.h
+
