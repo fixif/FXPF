@@ -195,8 +195,8 @@ int getWCPGeps(mpfr_t epsWCPG, filter *H, uint64_t alpha)
 	mpfr_t *WLowerBound;
 	WLowerBound = allocateMPFRMatrix(H->p, H->q, prec);
 
-	// printf("Filter: \n");
-	// filter_print(stderr, H);
+	 //fprintf(stderr, "Filter for the getWCPGeps: \n");
+	 //filter_print(stderr, H);
 	if(!WCPGLowerBound_double(WLowerBound, H->A, H->B, H->C, H->D, H->n, H->p, H->q, -64))
 	{
 		fprintf(stderr, "Could not compute lower bound on the Worst Case Peak Gain matrix. \n");
@@ -204,6 +204,9 @@ int getWCPGeps(mpfr_t epsWCPG, filter *H, uint64_t alpha)
 		return 0;
 	}
 
+	//fprintf(stderr, "WLowerBound: \n");
+	//writeMPFRMatrix(stderr, WLowerBound, H->p, H->q, 5, MPFR_RNDN);
+    //fprintf(stderr, "\n");
 	mpfi_t *eps;
 	eps = allocateMPFIMatrix(H->p, 1, prec);
 
@@ -219,8 +222,9 @@ int getWCPGeps(mpfr_t epsWCPG, filter *H, uint64_t alpha)
 		mpfi_add_d(sum_ur, sum_ur, H->ur[i]);
 	}
 
-fprintf(stderr, "Denum sum_j U_r: \n");
-mpfi_out_str(stderr, 10, 10, sum_ur);
+   // fprintf(stderr, "Denum sum_j U_r: \n");
+   // mpfi_out_str(stderr, 10, 10, sum_ur);
+   // fprintf(stderr, "\n");
 
 	/* computing the epsilon vector */
 	mpfi_t *WCPG_ur;
@@ -250,8 +254,9 @@ mpfi_out_str(stderr, 10, 10, sum_ur);
 			freeMPFIMatrix(WCPG_ur, H->p, 1);
 			return 0;
 		}
-printf("\n eps[%d] = \n", i);
-mpfi_out_str(stderr, 10, 5, eps[i]);
+//fprintf(stderr, "\n eps[%d] = \n", i);
+//mpfi_out_str(stderr, 10, 5, eps[i]);
+//fprintf(stderr, "\n");
 	}
 	
 
@@ -339,12 +344,13 @@ int msb_step1(mpfi_t *msb, uint64_t *msb_left, uint64_t *msb_right, filter *H, u
 	if(!getWCPGeps(epsWCPG, H, (uint64_t)1) || mpfr_cmp_ui(epsWCPG, (uint64_t)0) <= 0 )
 	{
 		fprintf(stderr, "Could not determine the epsilon for WCPG computation. Exit with error. \n");
+		fprintf(stderr, "epsWCPG = %f", mpfr_get_d(epsWCPG, MPFR_RNDN));
 		mpfr_clear(epsWCPG);
 		return 0;
 	}
 
-printf("\n ...epsWCPG: \n");
-mpfr_out_str(stderr, 10, 20, epsWCPG, MPFR_RNDN);
+    fprintf(stderr, "\n epsWCPG: \n");fflush(stdout);
+    mpfr_out_str(stderr, 10, 20, epsWCPG, MPFR_RNDN);
 
 	mpfr_t *WCPG;
 	WCPG = allocateMPFRMatrix(H->p, H->q, defaultPrec);
@@ -356,8 +362,8 @@ mpfr_out_str(stderr, 10, 20, epsWCPG, MPFR_RNDN);
 		mpfr_clear(epsWCPG);
 		return 0;
 	}	
-fprintf(stderr, "\n WCPG matrix: \n");
-writeMPFRMatrix(stderr, WCPG, H->p, H->q, 10, MPFR_RNDN);
+    fprintf(stderr, "\n Step 1: WCPG matrix of the initial filter \n");
+    writeMPFRMatrix(stderr, WCPG, H->p, H->q, 10, MPFR_RNDN);
 	
 
 	mpfr_t tmp_mpfr;
@@ -407,8 +413,9 @@ writeMPFRMatrix(stderr, WCPG, H->p, H->q, 10, MPFR_RNDN);
 			return 0;
 
 		}
-fprintf(stderr, "\nStep 1:log2WCPG_ur_%d: \n", i);
-mpfi_out_str(stderr, 10, 10, log2WCPG_ur);
+    //fprintf(stderr, "Step 1: [log2[(<<H>> * ur)_i]]_%d: \n", i);
+    //mpfi_out_str(stderr, 10, 10, log2WCPG_ur);
+    //fprintf(stderr,"\n");
 
 		/* Compute log2const = [log2(1 - 2^(1 - w_j))] */
 		mpfi_set_prec(tmp, defaultPrec);
@@ -429,7 +436,9 @@ mpfi_out_str(stderr, 10, 10, log2WCPG_ur);
 
 		mpfi_exp2(tmp, tmp);
 		mpfi_neg(tmp,tmp);
-		mpfi_log1p(log2const, tmp);
+		mpfi_add_ui(tmp, tmp, (unsigned long int)1);
+		mpfi_log2(log2const, tmp);
+		//mpfi_log1p(log2const, tmp);
 
 		if(mpfi_nan_p(log2const))
 		{
@@ -444,8 +453,8 @@ mpfi_out_str(stderr, 10, 10, log2WCPG_ur);
 			mpfi_clear(WCPG_ij_interval);
 			return 0;
 		}
-fprintf(stderr, "\n log2const: \n");
-mpfi_out_str(stderr, 10, 10, log2const);
+        //fprintf(stderr, "\n [log2(1 - 2^(1 - w_j))] = ");
+        //mpfi_out_str(stderr, 10, 10, log2const);
 
 		/* Compute [log2[(<<H>> * ur)_i]] - [log2(1 - 2^(1 - w_j))] */
 	
@@ -557,9 +566,9 @@ int msb_step2(mpfi_t *msb, uint64_t *msb_left, uint64_t *msb_right, filter *Hz1,
 		return 0;
 	}
 
-printf("\n ...epsWCPG_Hz1: \n");
+fprintf(stderr,"\n ...epsWCPG_Hz1: \n");
 mpfr_out_str(stderr, 10, 20, epsWCPG_Hz1, MPFR_RNDN);
-printf("\n ...epsWCPG_Delta: \n");
+fprintf(stderr, "\n ...epsWCPG_Delta: \n");
 mpfr_out_str(stderr, 10, 20, epsWCPG_Delta, MPFR_RNDN);
 
 	/* Computing WCPGs */
@@ -604,8 +613,8 @@ writeMPFRMatrix(stderr, WCPG_Delta, Delta->p, Delta->q, 10, MPFR_RNDN);
 	mp_prec_t precHz1 = getMaxPrecMPFRMatrix(WCPG_Hz1, Hz1->p, Hz1->q);
 	defaultPrec = precHz1 >= precDelta ? precHz1 : precDelta;
 
-	mpfi_t tmp_mpfr;
-	mpfi_init2(tmp_mpfr, defaultPrec);
+	mpfr_t tmp_mpfr;
+	mpfr_init2(tmp_mpfr, defaultPrec);
 
 	/* Computing element by element the MSB:
 		m_i = ceil[log2{WCPG(Hz1)*u_bound)_i + WCPG(Delta)*eps_bound)_i } - log2{A - 2^(1-w_i)} ]
@@ -650,10 +659,10 @@ writeMPFRMatrix(stderr, WCPG_Delta, Delta->p, Delta->q, 10, MPFR_RNDN);
 		{
 			/* convert WCPG_ij to interval */
 			mpfi_set_fr(WCPG_ij_interval, WCPG_Hz1[i * Hz1->q + j]);		
-printf("\n ...Multiplying the WCPG_Hz1[%d] = \n", i * Hz1->q + j);
-mpfi_out_str(stderr, 10, 10,WCPG_ij_interval);
-printf("\t by ur[%d] = %d \n", j,Hz1->ur[j]);
-			mpfi_set_ui(tmp, 0);
+            //fprintf(stderr,"\n ...Multiplying the WCPG_Hz1[%llu] = \n", i * Hz1->q + j);
+            //mpfi_out_str(stderr, 10, 10,WCPG_ij_interval);
+            //fprintf(stderr,"\t by ur[%d] = %f \n", j,Hz1->ur[j]);
+            //mpfi_set_ui(tmp, 0);
 
 			/* compute the interval [tmp] = <<H_z>>_ij * u_j */
 			mpfi_mul_d(tmp, WCPG_ij_interval, Hz1->ur[j]);
@@ -666,8 +675,8 @@ printf("\t by ur[%d] = %d \n", j,Hz1->ur[j]);
 		mpfi_set(Hz1ur_vector[i], WCPG_Hz1_ur);
 		
 
-printf("\n ++Step i = %d. Hz1ur_vector[i]: \n", i);
-mpfi_out_str(stderr, 10, 10, Hz1ur_vector[i]);
+        //fprintf(stderr,"\n ++Step i = %d. [<<Hz1>> * u ]: \n", i);
+        //mpfi_out_str(stderr, 10, 10, Hz1ur_vector[i]);
 
 		
 		/* Compute [(<<Delta>> * eps)_i] = sum_{j=1}^{q} [<<Delta>>_ij * eps_j]*/
@@ -675,13 +684,13 @@ mpfi_out_str(stderr, 10, 10, Hz1ur_vector[i]);
 		{
 			/* convert WCPG_ij to interval */
 			mpfi_set_fr(WCPG_ij_interval, WCPG_Delta[i * Delta->q + j]);		
-printf("\nIteration %d: WCPG_Delta[%d * %d + %d] = ",i,i,Delta->q, j);
-mpfi_out_str(stderr, 10, 10, tmp);
+            //printf("\nIteration %d: WCPG_Delta[%d * %d + %d] = ",i,i,Delta->q, j);
+            //mpfi_out_str(stderr, 10, 10, tmp);
 			mpfi_set_ui(tmp, 0);
 			/* compute the interval [tmp] = <<Delta>>_ij * eps_j */
 			mpfi_mul_d(tmp, WCPG_ij_interval, Delta->ur[j]);
-printf("\nIteration %d: WCPG_Delta[%d * %d + %d] * %f = \n",i,i,Delta->q, j, j, Delta->ur[j]);
-mpfi_out_str(stderr, 10, 10, tmp);
+            //printf("\nIteration %d: WCPG_Delta[%d * %d + %d] * %f = \n",i,i,Delta->q, j, j, Delta->ur[j]);
+            //mpfi_out_str(stderr, 10, 10, tmp);
 
 			/* add the [tmp] interval to the [(<<Delta>> * eps)_i] */
 			mpfi_add(WCPG_Delta_eps, WCPG_Delta_eps, tmp);					
@@ -689,8 +698,8 @@ mpfi_out_str(stderr, 10, 10, tmp);
 		/* copy the i-th element of the result vector to variable Deltaeps_vector */
 		mpfi_set(Deltaeps_vector[i], WCPG_Delta_eps);
 		
-printf("\n --Step i = %d. Deltaeps_vector[i]: \n", i);
-mpfi_out_str(stderr, 10, 10, WCPG_Delta_eps);
+        //printf("\n --Step i = %d. Deltaeps_vector[i]: \n", i);
+        //mpfi_out_str(stderr, 10, 10, WCPG_Delta_eps);
 
 		/* Compute [<<Hz1>> * u ] + [(<<Delta>> * eps)] */
 		mpfi_add(log2WCPGs, WCPG_Hz1_ur, WCPG_Delta_eps);
@@ -827,14 +836,14 @@ mpfi_out_str(stderr, 10, 10, WCPG_Delta_eps);
 		
 	}
 
-fprintf(stderr, "\n <+++++++++++++++++++++++Debug++++++++++++++++++++++++>\n The bound on the output (eps * WCPG_Delta) [p-1]= \n");
-mpfi_out_str(stderr, 10, 10, Deltaeps_vector[Hz1->p-1]);
-fprintf(stderr, "\n <++++++++++++++++++++++++++++++++++++++++++++++++++++>\n");
+//fprintf(stderr, "\n <+++++++++++++++++++++++Debug++++++++++++++++++++++++>\n The bound on the output (eps * WCPG_Delta) [p-1]= \n");
+//mpfi_out_str(stderr, 10, 10, Deltaeps_vector[Hz1->p-1]);
+//fprintf(stderr, "\n <++++++++++++++++++++++++++++++++++++++++++++++++++++>\n");
 	
-fprintf(stderr, "\n The <<Delta>>*eps vector is: \n");
-writeMPFIMatrix(stderr, Deltaeps_vector, 1, Hz1->p, 10);
-fprintf(stderr, "\n The <<Hz1>>*ur vector is: \n");
-writeMPFIMatrix(stderr, Hz1ur_vector, 1, Hz1->p, 10);
+//fprintf(stderr, "\n The <<Delta>>*eps vector is: \n");
+//writeMPFIMatrix(stderr, Deltaeps_vector, 1, Hz1->p, 10);
+//fprintf(stderr, "\n The <<Hz1>>*ur vector is: \n");
+//writeMPFIMatrix(stderr, Hz1ur_vector, 1, Hz1->p, 10);
 
 	/* Set the error vector in the fxpf_result structure to
 	error = <<Delta>> * eps 
@@ -876,7 +885,7 @@ int computeLSB(int *lsb, uint64_t *msb, uint64_t *w, uint64_t length)
 	for(i = 0; i < length; ++i)
 	{
 		lsb[i] = msb[i] - w[i] + 1;
-	 fprintf(stderr, "compute LSB: lsb[%d] = msb[i] - w[i] + 1 = %lld - %lld + 1 \n", i, lsb[i], msb[i], w[i] );
+	 fprintf(stderr, "compute LSB: lsb[%d] = %d = msb[i] - w[i] + 1 = %llu - %llu + 1 \n", i, lsb[i], msb[i], w[i] );
 	}
 	return 1;
 }
@@ -904,11 +913,11 @@ int determineFXPF(uint64_t *msb, int *lsb, filter *H, uint64_t *wl, fxpf_result 
 	filter_allocate(&Hz1, H->n, H->p + H->n, H->q);
 	createFilterHz1(&Hz1, H);
 
-printf("++++++++++++++++Filter H:\n");
-filter_print(stderr, H);
-printf("++++++++++++++++Filter Hz1:\n");
-filter_print(stderr, &Hz1);
-
+    fprintf(stderr,"++++++++++++++++Filter H:\n");fflush(stdout);
+    filter_print(stderr, H);
+    fprintf(stderr,"++++++++++++++++Filter Hz1:\n");
+    filter_print(stderr, &Hz1);
+    fflush(stderr);
 	mpfi_t *msb_Hz1;
 	msb_Hz1 = allocateMPFIMatrix(Hz1.p, 1, 64);
 	uint64_t *msb_inf_Hz1;
@@ -926,12 +935,13 @@ filter_print(stderr, &Hz1);
 		return -1;
 	}	
 	
-fprintf(stderr, "\n Step 1: MSB in mpfi format\n");
-writeMPFIMatrix(stderr, msb_Hz1, Hz1.p, 1, 5);
-printf("Step 1: MSB interval infinum \n");
-UINT64MatrixPrint(stderr, msb_inf_Hz1, 1, Hz1.p);
-printf("\n Step 1:  interval supremum \n");
-UINT64MatrixPrint(stderr, msb_sup_Hz1,  1, Hz1.p);
+    fprintf(stderr, "\n Step 1: MSB in mpfi format\n");
+    writeMPFIMatrix(stderr, msb_Hz1, Hz1.p, 1, 5);
+    fprintf(stderr, "---------------------------");
+//fprintf("Step 1: MSB interval infinum \n");
+//UINT64MatrixPrint(stderr, msb_inf_Hz1, 1, Hz1.p);
+//printf("\n Step 1:  interval supremum \n");
+//UINT64MatrixPrint(stderr, msb_sup_Hz1,  1, Hz1.p);
 
 fprintf(stderr, "------------------------------ Computing MSB on step 2 --------------------- \n");
 
@@ -975,8 +985,8 @@ fprintf(stderr, "------------------------------ Computing MSB on step 2 --------
 	
 fprintf(stderr, "\n Step 2: MSB in mpfi format\n");
 writeMPFIMatrix(stderr, msb_step2_interval, Hz1.p, 1, 5);
-printf("Step 2: MSB \n");
-UINT64MatrixPrint(stderr, msb_sup_step2, 1, Hz1.p);
+//printf("Step 2: MSB \n");
+//UINT64MatrixPrint(stderr, msb_sup_step2, 1, Hz1.p);
 
 	uint64_t *msb_new = (uint64_t*)calloc(Hz1.p, Hz1.p * sizeof(uint64_t)); 
 	uint64_t *msb_z = (uint64_t*)calloc(Hz1.p, Hz1.p * sizeof(uint64_t)); 
@@ -994,8 +1004,10 @@ UINT64MatrixPrint(stderr, msb_sup_step2, 1, Hz1.p);
 fprintf(stderr, "We are in the case, when msb_step2 is larger than msb_Hz1. \n");
 fprintf(stderr, "Steps = %d: MSB msb_step2_interval in mpfi format\n", steps );
 writeMPFIMatrix(stderr, msb_step2_interval, Hz1.p, 1, 25);
+fflush(stdout);
 fprintf(stderr, "Steps = %d: MSB msb_Hz1 in mpfi format from Step 1. \n", steps );
 writeMPFIMatrix(stderr, msb_Hz1, Hz1.p, 1, 25);
+fflush(stdout);
 
 			steps++;
 			/* Set the current estimation on MSBs to the corrected vector.
@@ -1020,21 +1032,23 @@ writeMPFIMatrix(stderr, msb_Hz1, Hz1.p, 1, 25);
 				free(lsb_max);
 				return -1;
 			}
-printf("Computing MSB on step %d -----------------\n",2 + steps  );
+fprintf(stderr,"Computing MSB on step %d -----------------\n",2 + steps  );
 fprintf(stderr, "Step %d: MSB:\n", 2 + steps );
 writeMPFIMatrix(stderr, msb_step2_interval, 1, Hz1.p, 5);
-printf("Step %d : MSB in mpfi format\n", 2 + steps  );
-UINT64MatrixPrint(stderr, msb_inf_step2, 1, Hz1.p);
-printf("Step %d : MSB in mpfi format\n", 2 + steps  );
-UINT64MatrixPrint(stderr, msb_sup_step2,  1, Hz1.p);
-fprintf(stderr, "Step %d: LSB:\n", 2 + steps );
+//printf("Step %d : MSB in mpfi format\n", 2 + steps  );fflush(stdout);
+//UINT64MatrixPrint(stderr, msb_inf_step2, 1, Hz1.p);
+//fflush(stdout);
+//printf("Step %d : MSB in mpfi format\n", 2 + steps  );fflush(stdout);
+//UINT64MatrixPrint(stderr, msb_sup_step2,  1, Hz1.p);
+//fprintf(stderr, "Step %d: LSB:\n", 2 + steps );
+//fflush(stdout);
 
-				   	for(int i = 0; i < Hz1.p; ++i)
-		            {
-fprintf(stderr," %d \t ", msb_sup_step2[i] - wl[i] + 1);
-fprintf(stderr, "compute LSB: lsb[%d] = msb[i] - w[i] + 1 = %lld - %lld + 1 = \n", i, msb_sup_step2[i], wl[i], msb_sup_step2[i] - wl[i] + 1 );
-		            }
-		            fprintf(stderr, "\n");
+for(int i = 0; i < Hz1.p; ++i)
+{
+//fprintf(stderr," %d \t ", msb_sup_step2[i] - wl[i] + 1);
+fprintf(stderr, "compute LSB: lsb[%d] = msb[i] - w[i] + 1 = %lld - %lld + 1 = %d \n", i, msb_sup_step2[i], wl[i], (int)(msb_sup_step2[i] - wl[i] + 1) );
+}
+fprintf(stderr, "\n");
 
 			/* Check if the new MSBs coincide with the current estimation. 
 			If they do, we step out of the loop. Otherwise, correct the MSB vector. */
@@ -1225,8 +1239,8 @@ void PerformWCPGSimulation_forY(filter *Hz1, uint64_t *wl, uint64_t *msb )
 			printf("Matrix D\n");
 			writeMPFRMatrix(stderr, D, p, q, 5, MPFR_RNDN);
 	*/
-			fprintf(output_exact, "%d %d %d", n, p, Tfinal);
-			fprintf(output_q, "%d %d %d", n, p, Tfinal);
+			//fprintf(output_exact, "%d %d %d", n, p, Tfinal);
+			//fprintf(output_q, "%d %d %d", n, p, Tfinal);
 
 			for(i = n+p-1; i < n + p; ++i)
 			{
@@ -1315,7 +1329,7 @@ void PerformWCPGSimulation(filter *Hz1, uint64_t *wl, uint64_t *msb )
 			fscanf(input, "%d %d", &Tfinal, &tt);
 			//Tfinal = 11;
 			U_i = allocateMPFRMatrix(Tfinal, Hz1->q, 64);
-			printf("====> Simulating the output with Tfinal = %d \n", Tfinal);
+			//printf("====> Simulating the output with Tfinal = %d \n", Tfinal);
 			//printf("simulating the output %d, and %d \n", -n, p);
 
 
@@ -1332,8 +1346,8 @@ void PerformWCPGSimulation(filter *Hz1, uint64_t *wl, uint64_t *msb )
 			printf("Matrix D\n");
 			writeMPFRMatrix(stderr, D, p, q, 5, MPFR_RNDN);
 	*/
-			fprintf(output_exact, "%d %d %d", n, p, Tfinal);
-			fprintf(output_q, "%d %d %d", n, p, Tfinal);
+			//fprintf(output_exact, "%d %d %d", n, p, Tfinal);
+			//fprintf(output_q, "%d %d %d", n, p, Tfinal);
 
 			for(i = n+p-1; i < n + p; ++i)
 			{
@@ -1663,12 +1677,14 @@ int simulateSS_SIMO(FILE *out_exact, FILE *out_q, int index, mpfr_t *X_out, mpfr
  * All output arguments (msb, lsb, error, additionalSteps)
  */
 int FXPF(uint64_t *msb, int *lsb, int *additionalSteps, double *error,
-int *wl, double *A, double *B, double *C, double *D, int n, int p, int q, double *u_bound)
+uint64_t *wl, double *A, double *B, double *C, double *D, int n, int p, int q, double *u_bound)
 {
 
     filter H;
-
+    fflush(stdout);
+    fprintf(stderr,"Hello and welcome! \n \n \n"); fflush(stdout);
     filter_allocate(&H, n, p, q);
+    fprintf(stderr, "Tadaaaa: u_bound[0] is %f\n", u_bound[0]);fflush(stderr);
 	filter_set(&H, n, p, q, A, B, C, D, u_bound);
 
 	fxpf_result result;

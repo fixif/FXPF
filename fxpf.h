@@ -72,7 +72,7 @@ int msb_step2								(mpfi_t *msb, uint64_t *msb_left, uint64_t *msb_right,
 
 int determineFXPF							(uint64_t *msb, int *lsb, filter *H, uint64_t *wl, fxpf_result *result);
 
-int FXPF                                    (uint64_t *msb, int *lsb, int *additionalSteps, double *error, int *wl,
+int FXPF                                    (uint64_t *msb, int *lsb, int *additionalSteps, double *error, uint64_t *wl,
                                             double *A, double *B, double *C, double *D,
                                             int n, int p, int q, double *u_bound);
 

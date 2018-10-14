@@ -34,7 +34,7 @@ _FXPFlib = ctypes.CDLL(ctypes.util.find_library('fxpf'))
 _FXPFfun = _FXPFlib.FXPF
 _FXPFfun.argtypes = ctypes.POINTER(ctypes.c_uint64), ctypes.POINTER(ctypes.c_int), ctypes.POINTER(
     ctypes.c_int), ctypes.POINTER(ctypes.c_double),
-ctypes.POINTER(ctypes.c_int), ctypes.POINTER(ctypes.c_double), ctypes.POINTER(ctypes.c_double), ctypes.POINTER(
+ctypes.POINTER(ctypes.c_uint64), ctypes.POINTER(ctypes.c_double), ctypes.POINTER(ctypes.c_double), ctypes.POINTER(
     ctypes.c_double),
 ctypes.POINTER(ctypes.c_double), ctypes.c_int, ctypes.c_int, ctypes.c_int, ctypes.POINTER(ctypes.c_double)
 
@@ -50,7 +50,7 @@ def FXPF_ABCD(A, B, C, D, u_bound, wl):
     pB = B.ctypes.data_as(ctypes.POINTER(ctypes.c_double))
     pC = C.ctypes.data_as(ctypes.POINTER(ctypes.c_double))
     pD = D.ctypes.data_as(ctypes.POINTER(ctypes.c_double))
-    pwl = wl.ctypes.data_as(ctypes.POINTER(ctypes.c_int))
+    pwl = wl.ctypes.data_as(ctypes.POINTER(ctypes.c_uint64))
     pu_bound = u_bound.ctypes.data_as(ctypes.POINTER(ctypes.c_double))
 
     # run the function to fill the empty array W

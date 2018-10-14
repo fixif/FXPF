@@ -29,7 +29,7 @@ from numpy.linalg.linalg import LinAlgError
 from scipy.signal import butter
 
 
-from fixif.FXPF import FXPF_ABCD, FXPF_readme
+from fixif.FXPF.FXPF import FXPF_ABCD, FXPF_readme
 
 
 def random_ABCD(n, p, q, pRepeat=0.01, pReal=0.5, pBCmask=0.90, pDmask=0.8, pDzero=0.5):
